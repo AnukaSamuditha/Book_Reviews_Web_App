@@ -15,7 +15,6 @@ export default function DashboardReview() {
   const { reviewId } = useParams();
   const navigate = useNavigate();
   
-  console.log("Here is the review id",reviewId)
 
   useEffect(() => {
     if (reviewId) {

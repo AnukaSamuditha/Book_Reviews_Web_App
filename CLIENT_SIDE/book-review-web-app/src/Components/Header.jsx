@@ -31,7 +31,7 @@ export default function Header() {
 
   return (
     <header className="w-full lg:h-[4rem] h-auto flex justify-between items-center p-3 lg:shadow-md relative">
-      {/* Sidebar */}
+      
       <div
         className={`fixed top-0 left-0 h-full bg-[#afa18f] text-white shadow-lg transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
@@ -101,8 +101,14 @@ export default function Header() {
             Login <ArrowRight color="black" />
           </button>
           <NavLink
+            to='/'
+            className={({isActive})=>isActive ? 'text-lg text-[#ec4e39] font-medium tracking-tighter pr-5 pl-4' : 'text-lg text-gray-500 font-medium tracking-tighter pr-5 pl-4'}
+          >
+            Reviews
+          </NavLink>
+          <NavLink
             to={cookies.loggedUser ? "/dashboard" : "/signin"}
-            className="text-lg text-gray-500 font-medium tracking-tighter pr-5 pl-8"
+            className={({isActive})=>isActive ? 'text-lg text-[#ec4e39] font-medium tracking-tighter pr-5 pl-4' : 'text-lg text-gray-500 font-medium tracking-tighter pr-5 pl-4'}
           >
             Dashboard
           </NavLink>

@@ -30,9 +30,6 @@ const Dashboard = () => {
   };
 
 
-
-  const userName = "John Doe";
-
   return (
     <div className="w-full h-screen flex">
       
